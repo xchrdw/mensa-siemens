@@ -1,0 +1,188 @@
+
+.content {
+    margin-top: 40px
+}
+
+.spinner-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#tcdiv {
+    word-wrap: break-word;
+}
+
+.term-cloud {font-size: 10px; }
+.term-cloud-1 {font-size: 8px; color: #acc1f3; }
+.term-cloud-2 {font-size: 10px; color: #86a0dc; }
+.term-cloud-3 {font-size: 12px; color: #607ec5; }
+.term-cloud-4 {font-size: 14px; color: #264ca2; }
+.term-cloud-5 {font-size: 18px; color: #133b97; }
+.term-cloud-6 {font-size: 22px; color: #002a8b; }
+.term-cloud-7 {font-size: 26px; color: #071a41; }
+.term-cloud-8 {font-size: 32px; color: #081122; }
+.term-cloud-9 {font-size: 36px; color: #000000; }
+.term-cloud-error {font-size: 10px; color: red; }
+.term-cloud-link {text-decoration: none; }
+.term-cloud-link:hover {text-decoration: underline;}
+
+#positive-smiley {
+    float: right;
+    color: #8f8;
+    transition: color 0.7s;
+    -webkit-transition: color 0.7s;
+}
+
+#positive-smiley.toggle {
+    color: #222 !important;
+}
+
+.sentence.Positive {
+    background: none;
+    transition: background 0.7s;
+    -webkit-transition: background 0.7s;
+}
+
+.sentence.Positive.toggle {
+    background: #cfc;
+}
+
+.sentence.QUESTION,
+.sentence.QUOTE,
+.sentence.EXCLAMATION {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    display: block;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.entity {
+    font-weight: bold;
+}
+
+.entity.PERSON:hover {
+    color: red;
+}
+
+.entity.LOCATION:hover {
+    color: blue;
+}
+
+.entity.ORGANIZATION:hover {
+    color: darkorange;
+}
+
+.entity.MONEY:hover {
+    color: YELLOW;
+}
+
+.entity.DATE:hover {
+    color: darkgoldenrod;
+}
+
+#hover-popup {
+    max-height: 600px;
+    overflow: auto;
+}
+
+#hover-popup img {
+    margin-bottom: 10px;
+    width: 45%;
+}
+
+.spinner {
+     margin: 100px auto;
+     width: 50px;
+     height: 30px;
+     font-size: 10px;
+     text-align: center;
+ }
+
+.stacktrace {
+    overflow: scroll;
+}
+
+#twitter-div {
+	margin-top: 30px;
+}
+
+.tweet {
+    margin-bottom: 20px;
+}
+
+.tweet .author .name {
+    font-weight: bold;
+}
+
+.tweet .text {
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+/***** SPINNER ****/
+
+.spinner > div {
+    background-color: #333;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4)
+    }
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+}
+
+@keyframes stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+
+* {
+    -webkit-user-select: text !important;
+    -khtml-user-select: text !important;
+    -moz-user-select: text !important;
+    -o-user-select: text !important;
+    user-select: text !important;
+}
