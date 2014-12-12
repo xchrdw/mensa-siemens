@@ -1,0 +1,31 @@
+<div class="row" style="height: 100%; padding-bottom: 80px;">
+    <div style="height: 100%; overflow-y: auto; overflow-x: hidden;">
+        <div class="row">
+            <div class="small-12 columns text-center">
+                <h1>Speiseplan: {{restaurant.name}}</h1>
+
+                <h2 class="subheader">{{day}}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <span ng-show="menu.food.length == 0">not open today</span>
+
+                <div style="height: 50%">
+                    <ul class="no-bullet">
+                        <li ng-repeat="food in menu.food">
+                            {{::food.name}}
+                            <span ng-show="::food.price">{{::food.price | number : 2}}€</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns" style="margin-top: -50px;">
+        <button class="left" ng-click="prev()">prev</button>
+        <button class="right" ng-click="next()">next</button>
+    </div>
+</div>

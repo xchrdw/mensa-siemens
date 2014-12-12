@@ -4,9 +4,10 @@ import lombok.Data;
 
 import com.google.gson.annotations.Expose;
 
-public @Data class Mensa {
+public @Data class Food {
+    private final String id;
     @Expose
-    public final int id;
+    private final String name;
     @Expose
-    public final String name;
+    private final Float price;
 }
