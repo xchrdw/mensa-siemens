@@ -1,7 +1,7 @@
 package de.chrdw.mensa_siemens.parser;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
 
@@ -16,8 +16,8 @@ import org.mockito.Mockito;
 import org.xml.sax.SAXException;
 
 import de.chrdw.mensa_siemens.parser.model.Food;
-import de.chrdw.mensa_siemens.parser.model.Restaurant;
 import de.chrdw.mensa_siemens.parser.model.Menu;
+import de.chrdw.mensa_siemens.parser.model.Restaurant;
 
 public class ParserTest {
 
@@ -42,10 +42,14 @@ public class ParserTest {
 
         Parser parser = new Parser(queryProvider);
         List<Menu> menus = parser.getMenus(37, LocalDate.of(2014, 12, 6));
-        assertThat(menus, hasSize(14));
-        assertThat(menus.get(0), nullValue());
-        assertThat(menus.get(1), nullValue());
-        Menu menu = menus.get(2);
+        Menu menu = menus.get(0);
+        assertThat(menu.getDate(), equalTo(LocalDate.of(2014, 12, 1)));
+        assertThat(menus, hasSize(12));
+
+        assertThat(menus.get(5).getFood(), empty());
+        assertThat(menus.get(6).getFood(), empty());
+
+        menu = menus.get(7);
         assertThat(menu.getFood(), hasSize(13));
         assertThat(menu.getDate(), equalTo(LocalDate.of(2014, 12, 8)));
         assertThat(menu.getFood().get(0), equalTo(new Food("11", "Salatbuffet à 100g", 0.6f)));
