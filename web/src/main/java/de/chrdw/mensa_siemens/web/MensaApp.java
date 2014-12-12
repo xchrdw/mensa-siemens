@@ -1,4 +1,4 @@
-package de.chrdw.mensa_siemens.parser;
+package de.chrdw.mensa_siemens.web;
 
 
 import java.time.LocalDate;
@@ -13,6 +13,7 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableMap;
 
+import de.chrdw.mensa_siemens.parser.Parser;
 import de.chrdw.mensa_siemens.parser.model.Restaurant;
 import de.chrdw.mensa_siemens.parser.model.Menu;
 import lombok.SneakyThrows;

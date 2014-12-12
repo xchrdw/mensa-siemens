@@ -1,4 +1,4 @@
-package de.chrdw.mensa_siemens.parser;
+package de.chrdw.mensa_siemens.web;
 
 import spark.ResponseTransformer;
 
